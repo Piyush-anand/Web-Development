@@ -1,0 +1,213 @@
+
+**************************************************** HTML BASICS ******************************************************************
+
+title- 
+Contains the site's title, which is one way users can find your site through a search engine, like Google.
+<title> .....</title>
+
+charset:
+<meta charset="utf-8"/>: Tells the web browser which character set to use. In this case, the character set is "utf-8".
+
+anchor:
+<a href="http://codecademy.com">Click here</a> to learn how to make a website!
+
+unordered list:
+<ul> .... </ul> and along with <li> ... </li>
+
+for videos
+<video width="320" height= "240" controls>
+  <source src= "https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-1/ollie.mp4"></video>
+
+for images
+<img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-1/bikes1.jpg"/>
+the url of images mostly end with .png or .jpg
+
+Using div:
+Div elements divide your page by enclosing other elements. These enclosed groups of elements can then be organized, moved and styled independently from one another.
+<div class="container"> 
+...
+</div>
+the nav container is in the main.css file
+
+
+header: Used to organize headers on a webpage.
+
+footer: Used to organize footers on a webpage.
+
+section: Defines sections on a webpage.
+
+**************************************************** CSS BASICS *************************************************************************
+
+Link css file to html
+<link rel="stylesheet" type="text/css" href="main.css"/>
+to access class name in main.css , use . operator
+.hero{
+  .......
+}
+font-size,color,font-family,etc. can be changed
+for background image , you can insert url of a jpg as:
+background-image: url("https://******.jpg");
+
+to style one anchor differently than all others , use id attribute:// id attribute can be used only once
+<a id="learn-code" href="https://www.codecademy.com">Click here to learn to code!</a>
+then in css code 
+#learn-code {
+  color: #2e69a3;  
+}
+can be use dfor like footers
+
+CSS Designs :
+Margin->Border->Padding->Content 
+border: thickness type color
+border: 2px solid black; 
+padding: 20px // changes the space around the content
+margin: space between different HTML elements 
+margin: 20px;
+Additional : margin-top/bottom/left/right
+
+CSS display and Position property : helps to move elements around the page.
+Display types determine how HTML elements will be arranged in relation to each other.
+display: flex can be used to easily align multiple page elements horizontally.
+We can make sure no child element moves off the page by using flex-wrap: wrap;
+Finally, to center rows of children elements, we can use justify-content: center;:
+CSS float property: By using float, we have the option of floating elements left or right.
+
+.parent {
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center;
+}
+
+The CSS position property enables you to position HTML elements in exact locations on a webpage. One useful value for this property is relative. This value positions page elements on a webpage relative to where they would normally appear.Ever click a button on a webpage that seemed to move down and then back up like a real-life button? We can implement this trick using the position property.
+The code snippet below moves a div with the class container 10px away from the up and 20px away from the left side of the page.
+.container {
+  position: relative; 
+  top: 10px; 
+  left: 20px;
+}
+In the .contact-btn a:active selector. :active is a psuedo-class selector, which we use to style an element only while it's being clicked.
+
+**************************************************************** BOOTSTRAP *********************************************************************
+
+Bootstrap is a popular CSS framework with prewritten CSS rules designed to help you build webpages faster.
+
+Linking bootstrap:
+<head>
+  ... 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+  ...
+</head>
+
+ They offer grids. A grid makes it possible to organize HTML elements using preconfigured columns. The Bootstrap grid contains 12 equal-sized columns.https://s3.amazonaws.com/codecademy-content/courses/make-a-website/img/grid.svg
+
+<header class="container">
+  <div class="row">
+   <h1 class="col-sm-4">Heading</h1>
+   <nav class="col-sm-8 text-right">
+    <p>nav item 1</p>
+    <p>nav item 2</p>
+    <p>nav item 3</p>
+   </nav> 
+ </div>
+</header> 
+The first part consists of the h1 with Bootstrap's class col-sm-4. It will take up the first four columns on the grid. The second part consists of the nav element with class col-sm-8. It will take up the remaining eight grid columns. text-right indicates that text will be arranged on the right side of the nav.
+
+In addition to a header/navigation, many websites have a large showcase area featuring important content. Bootstrap refers to this as a jumbotron.
+<section class="jumbotron">
+  <div class="container">
+    <div class="row text-center">
+       ...
+       <h2>Homemade Goods</h2>
+      <h3>This Year's Best</h3>
+      <a class="btn btn-primary" href="#" role="button">See all</a> // for anchor use this
+      ...
+    </div>
+  </div>
+</section>
+
+Supporting content can be arranged using Bootstrap's grid. First, an HTML section element with the container class is used. Next, div elements with the row class are added. Finally, the rows are divided by using divs with Bootstrap's col-sm-... class.
+<section class="container">
+  <div class="row">
+    <div class="col-sm-6">
+     ...
+    </div>
+    <div class="col-sm-6">
+     ...
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+     ...
+    </div>
+    <div class="col-sm-6">
+     ...
+    </div>
+  </div>
+</section>
+
+Footers display copyright information, social media links and sometimes site navigation. First, a footer element with Bootstrap's container class is used: Inside the footer, a div with Bootstrap's row class is added to hold footer content. Finally, the row is divided into parts using Bootstrap's grid. Here is one suggestion. 
+<footer class="container">
+  <div class="row">
+    <p class="col-sm-4">...</p> // &copy; for copyright symbol
+    <ul class="col-sm-8">
+      <li class="col-sm-1">...</li> // add social media images
+      <li class="col-sm-1">...</li>
+      <li class="col-sm-1">...</li>
+    </ul>
+  </div>
+</footer>
+
+**************************************** Javascript *******************************************************
+Data types -- String( "" or '' ) , Number, Boolean.
+console.log() -- to display on console.
+var -- define variable 
+math operations: use general math operators.
+math functions :
+        Math.random()- result random no. between 0 to 1 . 
+        Math.random()*50- random no. from 0 to 50
+        Math.floor()- round to nearest whole number (<=).
+comments--
+        single line // .. 
+        multi line /* .. */
+relational operators--
+        all same, except for not equal to (!==) and equals to (===).
+functions-- 
+        declared by fuction keyword.
+array-- 
+        zero indexed, same concept.
+        push()-add at end.
+        pop()-del from end.
+        for more array functions,visit <a https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array> Have fun </a>
+
+Using JavaScript woth CSS and HTML--
+        to link it to file use:  <script src='js/main.js'></script>
+        include that above closing of "body" tag
+        alert('Hello Javascript'); -- opens a pop up window with the message.
+        var name=document.getElementByClassName('element-name') : this will select the div element-name content from te HTML file.
+        We can also use libraries to make it easy.
+        jQuery is a library written in JavaScript. The syntax and functions it contains will help us interact with DOM efficiently. We'll walk through a few examples in the following exercises.
+
+        In order to use jQuery, we need to:
+
+Include jQuery in our project. jQuery is a library, which means it is a set of code in a file, therefore we will need to link that file in our HTML in order to access it.
+
+Once we link it in our HTML file, we can use its functions and syntax in our js/main.js file.
+Once linked, we'll need to make sure our HTML is loaded before we run our jQuery and JavaScript code.
+
+This will prevent our jQuery and JavaScript code from running before the elements they select are rendered.
+<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+Write this line to check if HTML elements are already loaded or not:
+<h>$(document).ready(main);</h>
+: Notice that we put main inside the parentheses of ready. main here is a callback, which means that our code will wait until the document 
+  (in  other words, the DOM) is loaded, or ready. When it is, then it will execute the main function. jQuery calls back to the main function, therefore it's a callback.
+With Jquery, we can select a HTML element just by:
+<h>$('.skillset');</h>
+'.' is used to select html element with classes
+'#' is used for selecting element with id
+
+<body REFER TO main.js for more info> </body>
+
+The coed below makes a button clickable and executes the function on a single click.
+$('.example-class').on('click', function() {
+  // execute the code here when .example-class is clicked.
+}); 
