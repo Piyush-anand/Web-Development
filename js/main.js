@@ -1,6 +1,6 @@
 function main(){
-  var $skillset=$('.skillset');
-  $($skillset).hide(); 			//hides the element
+  //var $skillset=$('.skillset');
+  $('.skillset').hide(); 			//hides the element
   $('.skillset').fadeIn(1000);	// fades in a hidden element for 1000 ms
 
 
@@ -17,6 +17,5 @@ function main(){
   		$(this).text('Projects Viewed');			// it will change the name of button once clicked to "Projects Viewed"
 
 	});
-}
 }
 $(document).ready(main);
